@@ -2,8 +2,10 @@ import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const quantity = useSelector((state)=>state.cart.quantity);
   return (
     <>
       <div className="h-[60px] flex items-center bg-black z-[100] sticky top-0">
@@ -38,10 +40,12 @@ const Navbar = () => {
             <span className="text-[10px]">Your</span>
             <span className="text-[13px]">Prime</span>
           </div>
-          <div className="flex items-center text-white">
-            <AiOutlineShoppingCart />
-            <span className="my-3 mx-5">0</span>
-          </div>
+            <div className="flex items-center text-white">
+            <Link to="/cart">
+              <AiOutlineShoppingCart />
+             </Link>
+              <span className="my-3 mx-5">{quantity}</span>
+            </div>
         </div>
       </div>
     </>
