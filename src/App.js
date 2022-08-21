@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/return&order" element={<Orders />} />
         <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/search" element={<Search/>}/>
       </Routes>
       {/* <Footer/> */}
     </div>

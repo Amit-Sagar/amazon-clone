@@ -20,7 +20,7 @@ export const productApi = createApi({
       query: (id) => createRequest(`products/${id}`),
     }),
     getCategories: builder.query({
-      query: (coinId) => createRequest(`/products/${coinId}`),
+      query: (category) => createRequest(`/products/category/${category}`),
     }),
 
     // Note: Change the coin price history endpoint from this - `coin/${coinId}/history/${timeperiod} to this - `coin/${coinId}/history?timeperiod=${timeperiod}`
